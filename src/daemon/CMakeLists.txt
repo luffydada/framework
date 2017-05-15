@@ -1,0 +1,2 @@
+ADD_SUBDIRECTORY(dae)
+ADD_SUBDIRECTORY(mediaplayer)
