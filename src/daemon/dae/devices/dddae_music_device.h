@@ -11,7 +11,7 @@
 #ifndef dddae_music_device_h
 #define dddae_music_device_h
 
-class ddMusicDevice: public ddDevice {
+class ddMusicDevice: public ddDevice, public ddTimer::interface {
 public:
 	enum {
 		DDENUM_IOCODE_MUSIC_A = DDDEF_IOCODE_MUSIC_START,
@@ -26,6 +26,12 @@ public:
 	virtual ddVoid onIoctl(ddUInt16 iocmd, ddCPointer pin, ddUInt16 uin, ddPointer pout, ddUInt16 uout);
 	virtual ddVoid onMessage(ddUInt32 msg, ddUInt32& wParam, ddUInt32& lParam);
 	virtual ddVoid onProtocol(ddCommand& cmd);
+	virtual ddVoid onTimer(ddTimer* pTimer);
+	
+	ddVoid handleIocmd_testIsOk();
+
+private:
+	ddTimer m_testTimer;
 };
 #endif // dddae_music_device_h
 

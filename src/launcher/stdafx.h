@@ -9,4 +9,6 @@
 *                                                                             *
 ******************************************************************************/
 #include "dandan.h"
+#include "dddae_interface.h"
+
 #include "ddlauncher_app.h"

@@ -16,6 +16,8 @@ public:
 	ddMediaPlayerGstreamer();
 	~ddMediaPlayerGstreamer();
 	ddVoid onProtocol(ddCommand& cmd);
+
+	ddVoid handleTestData();
 };
 #endif // ddmediaplayer_gstreamer_h
 

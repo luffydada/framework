@@ -26,11 +26,12 @@ ddVoid ddMediaPlayerApp::onInitApp()
 
 ddUInt16 ddMediaPlayerApp::myCommand()
 {
-	return DDDEF_IOCOMMAND_MUSIC || DDDEF_IOCOMMAND_VIDEO || DDDEF_IOCOMMAND_IMAGE;
+	return DDDEF_IOCOMMAND_MUSIC/* || DDDEF_IOCOMMAND_VIDEO || DDDEF_IOCOMMAND_IMAGE*/;
 }
 
 ddVoid ddMediaPlayerApp::onProtocol(ddCommand& cmd)
 {
+	dd_log_d("onProtocol,cmd:%d\n", cmd.command());
 	DD_GLOBAL_INSTANCE_DO(ddMediaPlayerGstreamer, onProtocol(cmd));
 }
 

@@ -10,4 +10,4 @@
 ******************************************************************************/
 #include "dandan.h"
 #include "dddae_app.h"
-#include "dddae_music_device.h"
+#include "dddae_device.h"

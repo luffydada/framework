@@ -16,10 +16,10 @@ public:
 	class interface {
 	public:
 		interface();
-		virtual ~interface();
-		virtual ddVoid onMusic_testOk();
+		virtual ~interface() {}
+		virtual ddVoid onMusic_testOk(ddBool isOk) {}
 	};
-	static ddVoid testIsOk();
+	static ddInt testIsOk(ddInt in);
 };
 #endif // dddae_music_interface_h
 
